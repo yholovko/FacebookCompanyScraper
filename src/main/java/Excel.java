@@ -38,10 +38,16 @@ public class Excel {
                     } else if (cell.getColumnIndex() == 1) {
                         facebookCompany.setName(String.valueOf(cell.getStringCellValue()));
                     } else if (cell.getColumnIndex() == 2) {
-                        facebookCompany.setLink(String.valueOf(cell.getStringCellValue()));
+                        String link = String.valueOf(cell.getStringCellValue());
+                        if (link.startsWith("https")) {
+                            facebookCompany.setLink(link);
+                        } else {
+                            facebookCompany = null;
+                            break;
+                        }
                     }
                 }
-                if (facebookCompany != null){
+                if (facebookCompany != null) {
                     facebookCompanies.add(facebookCompany);
                 }
             }
