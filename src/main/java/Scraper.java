@@ -51,9 +51,12 @@ public class Scraper {
     private int getCommentsForPost(Post post){
         Integer totalComments;
         try {
-            totalComments = facebook.getPostComments(post.getId(), new Reading().limit(0).summary()).getSummary().getTotalCount();
-            if (totalComments != null) {
-                return totalComments;
+            Summary summary = facebook.getPostComments(post.getId(), new Reading().limit(0).summary()).getSummary();
+            if (summary != null) {
+                totalComments = summary.getTotalCount();
+                if (totalComments != null) {
+                    return totalComments;
+                }
             }
         } catch (FacebookException e) {
             e.printStackTrace();

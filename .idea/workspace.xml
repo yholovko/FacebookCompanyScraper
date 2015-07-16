@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58e34216-df22-4919-a037-08552bab5089" name="Default" comment="optimize requests to facebook">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
+    <list default="true" id="58e34216-df22-4919-a037-08552bab5089" name="Default" comment="added access token">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Scraper.java" afterPath="$PROJECT_DIR$/src/main/java/Scraper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FacebookCompanyScraper.iws" />
@@ -26,21 +26,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8181818">
+            <state vertical-scroll-proportion="0.0">
               <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Scraper.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Scraper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Scraper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.5185185">
+              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,8 +91,8 @@
         <option value="$PROJECT_DIR$/src/main/java/Result.java" />
         <option value="$PROJECT_DIR$/src/main/java/Excel.java" />
         <option value="$PROJECT_DIR$/src/main/java/FacebookPost.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Scraper.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Scraper.java" />
       </list>
     </option>
   </component>
@@ -506,7 +506,7 @@
       <workItem from="1436868546677" duration="15673000" />
       <workItem from="1436906768483" duration="4824000" />
       <workItem from="1436977262718" duration="15844000" />
-      <workItem from="1437009894223" duration="21233000" />
+      <workItem from="1437009894223" duration="22107000" />
     </task>
     <task id="LOCAL-00001" summary="pre-final version">
       <created>1437005037372</created>
@@ -520,11 +520,17 @@
       <option name="project" value="LOCAL" />
       <updated>1437060652767</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added access token">
+      <created>1437063914333</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1437063914333</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57670000" />
+    <option name="totallyTimeSpent" value="58544000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -579,7 +585,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="pre-final version" />
     <MESSAGE value="optimize requests to facebook" />
-    <option name="LAST_COMMIT_MESSAGE" value="optimize requests to facebook" />
+    <MESSAGE value="added access token" />
+    <option name="LAST_COMMIT_MESSAGE" value="added access token" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -764,21 +771,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Scraper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Scraper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8181818">
-          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-          <folding />
+        <state vertical-scroll-proportion="0.5185185">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
