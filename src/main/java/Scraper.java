@@ -67,7 +67,7 @@ public class Scraper {
     private List<Post> getPosts(String companyName){
         List<Post> posts = new ArrayList<Post>();
         try {
-            ResponseList<facebook4j.Post> fetchedPosts = facebook.getPosts(facebook.getPage(companyName).getId(), new Reading().fields("id", "message", "link", "shares", "from").limit(100));
+            ResponseList<facebook4j.Post> fetchedPosts = facebook.getPosts(facebook.getPage(companyName).getId(), new Reading().fields("id", "message", "link", "shares", "from", "created_time").limit(100));
             if (fetchedPosts != null) {
                 Paging<Post> paging;
                 do {
@@ -84,11 +84,12 @@ public class Scraper {
     }
 
     public Result getInformation() {
-        final String companyNameFromUrl = facebookCompany.getLink().replaceAll("https://www.facebook.com/", "");
         Result result = new Result();
 
         try {
-            Page facebookPage = facebook.getPage(companyNameFromUrl, new Reading().fields("likes", "talkingAboutCount"));
+            final String companyNameFromUrl = facebook.getLink(facebookCompany.getLink(), new Reading().fields("id")).getId();
+
+            Page facebookPage = facebook.getPage(companyNameFromUrl, new Reading().fields("name", "likes", "talking_about_count"));
 
             final String companyNameOnPage = facebookPage.getName();
             result.setNameOfTheCompany(facebookCompany.getName());
@@ -118,8 +119,7 @@ public class Scraper {
                 count++;
             }
         } catch (FacebookException e) {
-            System.err.println(String.format("Page %s not found or other error. See the stack trace", facebookCompany.getLink()));
-            e.printStackTrace();
+            System.err.println(String.format("Page %s with ID = %s not found or other error", facebookCompany.getLink(), facebookCompany.getId()));
             result = null;
         }
 

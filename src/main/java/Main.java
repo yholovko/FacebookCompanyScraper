@@ -11,12 +11,13 @@ import java.util.List;
 
 public class Main {
     final public static String accessTokenString = "763885633733453|UPL0nXC91GOdVIomVTYAlOB2JUs";
+//    final public static String accessTokenString = "CAACEdEose0cBAM2ZAc9i6iEpVJsgZAE9ZAPR25w0QoeSHm0eZCM6UZBfhP0al3wThZCi64babwWOaU8KL8uODVhnBVrvC1bdZBJk5hfPvuYnt4PZAZCaS1UyPfAmBFuNavYrDnoysUIezcVNb54VCgVipVSWqmXDEsrWS64UZBddNaXgrMR9OIrpb4UooZCXQ7u1kHlkcP7OCZCcUCC4pRMxZBTIZBvLYZCorbAknwZD";
 
     public static void main(String[] args) {
         List<FacebookCompany> facebookCompanies = Excel.getInformation("/home/jacob/Documents/FacebookCompanyScraper/FB Page Links All.xlsx");
 
         for (FacebookCompany facebookCompany : facebookCompanies) {
-            System.out.println(String.format("Start to processing %s", facebookCompany.getLink()));
+            System.out.println(String.format("Start to processing %s with ID = %s", facebookCompany.getLink(), facebookCompany.getId()));
             Scraper scraper = new Scraper(facebookCompany);
             Result result = scraper.getInformation();
             if (result != null) {
