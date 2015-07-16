@@ -3,7 +3,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Post {
+public class FacebookPost {
     private String textOfPost;
     private Date dateAndTimeOfPost;
     private String whoMadeThePost;
@@ -38,8 +38,8 @@ public class Post {
         return "";
     }
 
-    public void setDateAndTimeOfPost(long unixTime) {
-        this.dateAndTimeOfPost = new java.util.Date(unixTime * 1000);
+    public void setDateAndTimeOfPost(Date time) {
+        this.dateAndTimeOfPost = time;
     }
 
     public String getWhoMadeThePost() {

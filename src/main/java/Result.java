@@ -5,7 +5,7 @@ public class Result {
     private String nameOfTheCompany;
     private int totalLikesOnCompanyFBPage;
     private int totalNumberOfPeopleWhoHaveBeenHere;
-    private List<Post> posts = new ArrayList<Post>();
+    private List<FacebookPost> posts = new ArrayList<FacebookPost>();
 
     public String getNameOfTheCompany() {
         return nameOfTheCompany;
@@ -31,11 +31,11 @@ public class Result {
         this.totalNumberOfPeopleWhoHaveBeenHere = totalNumberOfPeopleWhoHaveBeenHere;
     }
 
-    public List<Post> getPosts() {
+    public List<FacebookPost> getPosts() {
         return posts;
     }
 
-    public void addPost(Post post) {
+    public void addPosts(FacebookPost post) {
         this.posts.add(post);
     }
 }

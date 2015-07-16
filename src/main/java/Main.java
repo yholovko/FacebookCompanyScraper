@@ -1,25 +1,17 @@
 import java.util.List;
 
+/**
+ * Get an access token from:
+ * https://developers.facebook.com/tools/explorer
+ * Copy and paste it in Scraper.java ==> 'accessTokenString' value
+ */
+
 public class Main {
     public static void main(String[] args) {
-        List<FacebookCompany> facebookCompanies = Excel.getInformation("C:\\Users\\Jacob\\Documents\\Projects\\FacebookCompanyScraper\\FB Page Links All.xlsx");
-
-
+        List<FacebookCompany> facebookCompanies = Excel.getInformation("/home/jacob/Documents/FacebookCompanyScraper/FB Page Links All.xlsx");
         for (FacebookCompany facebookCompany : facebookCompanies) {
-            Scraper scraperThread = new Scraper(facebookCompany);
-            scraperThread.run();
-//            scraperThread.setName(facebookCompany.getName());
-//            scraperThread.start();
-//
-//            synchronized (scraperThread) {
-//                try {
-//                    System.out.println("Waiting for "+ scraperThread.getName() +" to complete...");
-//                    scraperThread.wait();
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//                System.out.println(scraperThread.getName() + "Finished");
-//            }
+            Scraper scraper = new Scraper(facebookCompany);
+            Excel.writeToFile(facebookCompany, scraper.getInformation());
         }
     }
 }

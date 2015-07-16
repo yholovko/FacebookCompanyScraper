@@ -83,7 +83,7 @@ public class Excel {
             row.createCell(cellIndex++).setCellValue(result.getTotalLikesOnCompanyFBPage());
             row.createCell(cellIndex++).setCellValue(result.getTotalNumberOfPeopleWhoHaveBeenHere());
 
-            Post post = result.getPosts().get(i);
+            FacebookPost post = result.getPosts().get(i);
             row.createCell(cellIndex++).setCellValue(post.getTextOfPost());
             row.createCell(cellIndex++).setCellValue(post.getDateOfPost());
             row.createCell(cellIndex++).setCellValue(post.getTimeOfPost());
