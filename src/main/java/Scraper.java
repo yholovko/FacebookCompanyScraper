@@ -89,6 +89,9 @@ public class Scraper {
         try {
             final String companyNameFromUrl = facebook.getLink(facebookCompany.getLink(), new Reading().fields("id")).getId();
 
+            //comment the above line and uncomment the next for getting results with temporary access token (only for 'page not found' pages)
+            //final String companyNameFromUrl = facebook.getPage(facebookCompany.getLink(), new Reading().fields("id")).getId();
+
             Page facebookPage = facebook.getPage(companyNameFromUrl, new Reading().fields("name", "likes", "talking_about_count"));
 
             final String companyNameOnPage = facebookPage.getName();
