@@ -123,6 +123,7 @@ public class Scraper {
             }
         } catch (FacebookException e) {
             System.err.println(String.format("Page %s with ID = %s not found or other error", facebookCompany.getLink(), facebookCompany.getId()));
+            e.printStackTrace();
             result = null;
         }
 
